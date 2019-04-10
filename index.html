@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138078396-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138078396-1');
+  </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Elections et immigration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Krub:300,400,700|Merriweather:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link type="text/css" rel="stylesheet" href="./static/css/animate.css"/>
+    
+
+<style type="text/css">
+    .img-back {
+    background-image: url('./static/img/france_ue.jpg');
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.title {
+    text-align: center;
+    padding-top: 70px;
+}
+
+/*
+** BASE
+*/
+body {
+    font-family: krub;
+    margin: 0px,
+    
+}
+
+h1 {
+    color: white;
+    font-weight: 700;  
+}
+
+h2 {
+    color: black;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+h3 {
+    margin-top: 40px;
+}
+
+h4 {
+  color: black;
+    margin-top: 10px;
+}
+
+h5 {
+    color: black;
+}
+
+h6 {
+    margin : 65px 0px;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="img-back">
+            <div class="filter">
+            </div>
+        </div>
+    </header>
+<!-- ./HEADER -->
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <p>A l’approche des élections européennes, le paysage politique est au centre de toutes les attentions. L’une des craintes majeures de ce scrutin est une percée notable au Parlement Européen des partis d’extrême droite. Une telle issue est d’autant plus probable que le vote populiste suit une tendance croissante sur le Vieux Continent depuis 2001, comme on peut le constater sur l’infographie du Figaro (<a href="http://grand-angle.lefigaro.fr/extreme-droite-europe-enquete-vote-populisme">ici</a>).
+                Une entrée « massive » au Parlement Européen de partis populistes serait synonyme de difficultés quant aux réformes de l’Union que certains estiment aujourd’hui pressantes.</p >
+                <p>
+                  Afin d’éviter ce scénario les listes non-populistes auront la lourde tâche de répondre aux préoccupations de leurs concitoyens.
+                  Parmi celles-ci, on retrouve en pole position la question de l’immigration pour de nombreux pays. Nous nous concentrons sur cette page sur le cas de la France.
+                </p>
+                <p><i>
+                  L’eurobaromètre est un outil révélant les perceptions des citoyens européens vis à vis du projet d’Union, mais aussi leurs préoccupations. Voici ce qu’ils révèlent en France.
+                </i></p>
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-12 col-lg-6 wow fadeInLeft">
+                </a>
+                <h4>En 2014</h4>
+                <p><strong>9%</strong> de la population estimait que l’immigration était l’une des deux plus importantes problématiques auxquelles la France était confrontée. Mais <strong>20%</strong> étaient de l’avis que ce sujet était l’un des plus sensibles pour l’Union Européenne. Toutefois le contexte économique, post-crise, attisait le plus de crainte.</p>
+                <p><a class="btn btn-lg btn-primary" href="http://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/Chart/getChart/themeKy/42/groupKy/208?fbclid=IwAR2vVBZ_HnYgBwjT9tieeCN5PGxIuk4W-niFpj2uDlPgjdPda20aADPRFjo" role="button">En savoir plus ...</a></p>
+            </div>
+            <div class="col-12 col-lg-6 wow fadeInRight">  
+                <h4>En 2018</h4>
+                <p>Avec la reprise économique, les préoccupations des Français ont changé. Bien que le chômage et le pouvoir d’achat soient au centre des attentions, la question de l’immigration est estimée comme l’une des deux plus importantes problématiques auxquelles est confrontée la France par <strong>15%</strong> des citoyens. Concernant l’Europe, elle devient la préoccupation première avec <strong>33%</strong> des suffrages.</p>
+                <p><a class="btn btn-lg btn-primary" href="http://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/Chart/getChart/themeKy/42/groupKy/208?fbclid=IwAR2vVBZ_HnYgBwjT9tieeCN5PGxIuk4W-niFpj2uDlPgjdPda20aADPRFjo" role="button">En savoir plus ...</a></p>
+            </div>
+        </div>
+        <h3>Tentons alors de comprendre ce constat par les chiffres. Que s’est-il passé en si peu de temps ?</h3>
+        <hr/>
+    </div>
+    
+    <div class="container my-5">
+        <div class="row">
+          <div class="col-md-8">
+            <h4>Evolution temporelle de la population immigrée en pourcentage de la population totale</h4>
+            <canvas id="evolMoyImmigPercent" width="80%" height="60%"></canvas>
+            <blockquote class="blockquote">
+              <footer class="blockquote-footer">Source: INSEE</footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4">
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            <div class="p-4 mb-3 bg-light rounded">
+              <p class="mb-0">Ce graphique représente l’évolution temporelle de la part de la population immigrée en France. Par immigré, nous entendons des personnes nées étrangères et à l’étranger résidant en France (définition INSEE).</p>
+            </div>
+          </div>
+            <h5 style="color: red;">Oh, mais rien ne bouge, non ?</h5>
+            <p>Les données nous permettent par ailleurs de mieux connaître ces personnes et avant tout leur origine. La carte ci-dessous représente les dix flux entrants les plus importants. </p>
+        </div>
+        <hr/>
+    </div>
+
+     <div class="container my-5">
+      <h2>Caractéristiques des personnes ayant migrées <span class="text-muted"> Focus</span></h2>
+      <p class="lead">Origine - En 2017</p>
+      <div class="row" id="chartdiv">
+      </div>
+        <blockquote class="blockquote">
+          <footer class="blockquote-footer">Source: Eurostat</footer>
+        </blockquote>
+    </div>
+
+    <div class="container my-5">
+      <div class="row">
+
+        <div class="col-md-6">
+          <p> Quels sont les origines les plus représentées en France en 2017 ? </p>
+          <canvas id="immigrationtoFrance" width="80%" height="60%"></canvas>
+          <blockquote class="blockquote">
+            <footer class="blockquote-footer">Source: Eurostat</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <p> Quels sont les pays qui accueillent le plus d'immigrés en 2017 ? </p>
+          <canvas id="immigrationAllCountry" width="80%" height="60%"></canvas>
+          <blockquote class="blockquote">
+            <footer class="blockquote-footer">Source: Eurostat</footer>
+          </blockquote>
+        </div>
+      </div>
+      <p>Les pays magrébins (Algérie, Maroc et Tunisie) sont les plus représentés dans la population immigrée avec une part s’élevant à environ 36% de la totalité de la population ayant migrée en France en 2017. En outre, on note une immigration interne à l’Union Européenne, dont six pays représentent 26% des immigrés en France.</p>
+      <h5 style="color: red;">Jusqu’ici tout va bien non ?</h5>
+      <p>Pour comprendre pourquoi la question de l’immigration est centrale il nous faut alors nous intéresser au profil de ces personnes. </p>
+    </div>
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="lead">Age</p>
+          <canvas id="ageEvolTemp" width="80%" height="60%"></canvas>
+          <blockquote class="blockquote">
+            <footer class="blockquote-footer">Source: INSEE</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-5">
+        </div>
+      </div>
+      <p>On ne note aucune évolution de la répartition des tranches d’âge entre 2006 et 2015. En revanche, il s’avère que la majorité de cette population est en âge de travailler avec 54% de personnes âgées de 25 à 55 ans. </p>
+      <p>La population immigrée est en majorité une population en âge de travailler. Ces chiffres se suffisent-ils pour confirmer les craintes de certains quant au conflit sur le marché du travail ?</p>
+      <p>De plus, le monde indique que: "L’autorisation provisoire de travail, qui doit être renouvelée au minimum tous les six mois, est délivrée par la préfecture sur certains critères : le demandeur d’asile doit disposer d’une promesse d’embauche ou d’un contrat de travail, et le préfet peut la refuser « si le niveau de chômage est trop important pour le métier dans le bassin d’emploi considéré »."
+      </p>
+      <p><a class="btn btn-lg btn-primary" href="https://www.lemonde.fr/les-decodeurs/article/2016/10/10/idee-recue-sur-les-migrants-4-6-ils-volent-le-travail-des-francais_5011081_4355770.html?fbclid=IwAR3pdBDruX-ORF1YovaZ6tLvgeVTJ0tZA2dck1Y4rtVa2IdwrIJKDPot2Eg" role="button">En savoir plus ...</a></p>
+      <h5 style="color: red;">Tiens tiens… nous avons souligné que le chômage restait une préoccupation majeure des français.</h5>
+      <p>Ceci expliquerait-il le préjugé suivant : <i>« Les immigrés volent nos postes ».</i>
+          Bien que nous ne prétendons pas que les possibles conflits sur le marché du travail soit la seule raison de l’attisement de la préoccupation autour de la question de l’immigration, nous nous interrogeons sur la suffisance de ces chiffres pour confirmer ces craintes.</p>
+      <p>Pour y répondre, nous avons confronté les distributions des catégories socio-professionnelles des populations immigrée et non-immigrée aux taux de  chômage de ces mêmes catégories. </p>
+      <hr/>
+    </div>
+    <div class="container my-5">
+      <p class="lead">Aperçu des catégories socio-professionnelles.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <canvas id="immigCSP" width="90%" height="90%"></canvas>
+          <blockquote class="blockquote">
+            <footer class="blockquote-footer">Source: INSEE</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <canvas id="NonimmigCSP" width="90%" height="90%"></canvas>
+          <blockquote class="blockquote">
+            <footer class="blockquote-footer">Source: INSEE</footer>
+          </blockquote>
+        </div>
+      </div>
+      <p> On observe dans un premier temps que la répartition des catégories socio-professionnelles sont équivalentes entre la population immigrée et non immigrée.</p>
+      <p><span class="text-muted"> Focus </span></p>
+      <p>En enlevant les catégories "Sans activité professionnelle" et "Retraités", on observe que la répartition des classes est inégale. En effet, la population immigrée, en proportion, est plus représentée dans les catégories "Ouvriers" et "Employés" que les personnnes non immigrées.</p>
+      <h3>Ainsi, les tensions sur le marché du travail actuelles ne sont-elles pas assimilées à tord à la dynamique migratoire ?</h3>
+      <div class="row">
+        <div class="col-md-7">
+          <canvas id="chomageCSP" width="90%" height="90%"></canvas>
+        </div>
+        <div class="col-md-5">
+          </br>
+          </br>
+          </br>
+          </br>
+          </br>
+          </br>
+          <div class="p-4 mb-3 bg-light rounded">
+            <p class="mb-0">Ce graphe représente le taux de chômage par catégorie socio-professionnelles.</p>
+          </div>
+        </div>
+      </div>
+      <hr/>
+    </div>
+
+    <div class="container my-5">
+      <div class="row">
+        <h2>Répartition des immigrés en France<span class="text-muted"> par département</span></h2>
+        </br>
+        <p>
+          Afin d'exposer le contexte, observons tout d'abord la réalité de l'immigration en France, en chiffre. La pression médiatique ainsi que les idées reçues et relayées, notamment lors des campagnes électroles, cristallisent les passions et tend à imposer une idée d'immigration de masse en France. Qu'en est il de la situation réelle ?
+        </p>
+        </br>
+        <p>
+          La carte ci-dessous recense la part des personnes immigrées par département, proportionellement à la population totale du département en 2015.
+        </p>
+        <div class="col-md-6">
+          <div class="mapcontainer">
+              <div class="map">                  
+              </div>
+              <div class="areaLegend">
+              </div>
+          </div>
+            <blockquote class="blockquote">
+              <footer class="blockquote-footer">Source: INSEE</footer>
+            </blockquote>
+      </div>
+        <div class="col-5">
+          </br>
+            </br>
+            <p>
+              Moyenne nationale : <strong>7,5%</strong>
+            </p>
+            </br>
+            </br>
+            <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Population d'immigrés - %</th>
+                  <th>Moins de 3%</th>
+                  <th>De 3% à 6%</th>
+                  <th>De 6% à 10%</th>
+                  <th>Plus de 10%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nombre de départements</td>
+                  <td>11</td>
+                  <td>35</td>
+                  <td>34</td>
+                  <td>16</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </br>
+          </br>
+          <p>
+            Il est donc important de remarquer que plus de la moitié des départements français présente moins de 6% de population immigrée.
+          </p>
+        </div>
+      </div>
+      <hr/>
+    </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+
+<script>
+  window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+</script>
+
+<script src="./static/js/bootstrap.bundle.min.js"></script>
+<script src="./static/js/Chart.min.js"></script>
+<script src="./static/js/utils.js"></script>
+
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="./static/js/Chart.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+        charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+<script src="./static/js/jquery.mapael.js" charset="utf-8"></script>
+<script src="./static/js/france_departments.js" charset="utf-8"></script>
+
+<!-- Chart code -->
+<script src="./static/js/map_js_world.js"></script>
+<script src="./static/js/map_france_immig_dpt.js"></script>
+
+
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+</style>
+
+<!-- INSEE DATA -->
+<script type="text/javascript">
+var color = Chart.helpers.color;
+new Chart(document.getElementById("evolMoyImmigPercent"), {
+    type: 'line',
+    data: {
+      labels: [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+      datasets: [{
+      label: 'Immigrés - %',
+      backgroundColor: color(window.chartColors.red).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.red,
+      borderWidth: 1,
+      fill: false,
+      data: [6.6, 6.8, 6.8, 6.9, 7. , 7.1, 7.2, 7.3, 7.4, 7.5]
+    },]
+    },
+    options: {
+          responsive: true,
+          title: {
+              display: true,
+          },
+          tooltips: {
+              mode: 'index',
+              intersect: true
+          },
+          hover: {
+                  mode: 'nearest',
+                  intersect: true
+              },
+          scales: {
+                  xAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: 'Années'
+                      }
+                  }],
+                  yAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: "Immigrés - pourcentage de la population totale"
+                      },
+                      ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 15
+                },
+                  }]
+              },
+}
+});
+</script>
+
+<script type="text/javascript">
+var color = Chart.helpers.color;
+
+// INSEE
+new Chart(document.getElementById("ageEvolTemp"), {
+    type: 'bar',
+    data: {
+      labels: [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+      datasets: [{
+      type: 'bar',
+      label: 'Moins de 15 ans',
+      stack: 'Stack 0',
+      backgroundColor: color(window.chartColors.red).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.red,
+      borderWidth: 1,
+      data: [4.87, 4.86, 4.82, 4.81, 4.78, 4.76, 4.76, 4.79, 4.82, 4.88]
+    }, {
+      type: 'bar',
+      label: '15 à 24 ans',
+      stack: 'Stack 1',
+      backgroundColor: color(window.chartColors.blue).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.blue,
+      borderWidth: 1,
+      data: [8.98, 8.82, 8.7 , 8.63, 8.53, 8.51, 8.47, 8.39, 8.41, 8.41]
+    },
+    {
+      type: 'bar',
+      label: '25 à 54 ans',
+      stack: 'Stack 2',
+      backgroundColor: color(window.chartColors.green).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.green,
+      borderWidth: 1,
+      data: [54.96, 54.9 , 54.75, 54.59, 54.5 , 54.41, 54.3 , 54.2 , 54.03, 53.84]
+    },
+    {
+      type: 'bar',
+      label: '55 ans ou plus',
+      stack: 'Stack 3',
+      backgroundColor: color(window.chartColors.orange).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.orange,
+      borderWidth: 1,
+      data: [31.19, 31.42, 31.73, 31.97, 32.19, 32.32, 32.47, 32.61, 32.74, 32.86]
+    },
+    ]
+    },
+    options: {
+          responsive: true,
+          title: {
+              display: true,
+              text: "Evolution temporelle de l'âge de la population immigrée en pourcentage de la population immigrée totale",
+          },
+          tooltips: {
+              mode: 'index',
+              intersect: true
+          },
+          hover: {
+                  mode: 'nearest',
+                  intersect: true
+              },
+          scales: {
+                  xAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: 'Années'
+                      }
+                  }],
+                  yAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: "Pourcentage de la tranche d'age"
+                      }
+                  }]
+              },
+}
+});
+</script>
+
+<script type="text/javascript">
+var color = Chart.helpers.color;
+new Chart(document.getElementById("immigCSP"), {
+  type: 'polarArea',
+      data: {
+      datasets: [{
+        data: [ 0.2 ,  4.2 ,  7.47,  9.1 , 16.65, 16.3 , 19.13, 26.94],
+        backgroundColor: [
+          color(chartColors.green).alpha(0.7).rgbString(),
+          color(chartColors.purple).alpha(0.7).rgbString(),
+          color(chartColors.blue).alpha(0.7).rgbString(),
+          color(chartColors.orange).alpha(0.7).rgbString(),
+          color(chartColors.yellow).alpha(0.7).rgbString(),
+          color(chartColors.grey).alpha(0.7).rgbString(),
+          color(chartColors.black).alpha(0.7).rgbString(),
+          color(chartColors.red).alpha(0.7).rgbString(),
+        ],
+        label: 'Immigrations'
+      }],
+      labels: ['Agriculteurs exploitants', "Artisans, commerçants, chefs d'entreprise",
+               'Cadres et professions intellectuelles supérieures', 'Professions intermédiaires',
+               'Employés', 'Ouvriers', 'Retraités', 'Sans activité professionnelle']
+      },
+      options: {
+        responsive: true,
+        title: {
+              display: true,
+              text: 'Répartition des catégories socio-professionelles - Population immigrée- %'
+          },
+        legend: {
+            display: true,
+            position: 'bottom',
+        },
+      }
+});
+</script>
+
+<script type="text/javascript">
+var color = Chart.helpers.color;
+new Chart(document.getElementById("NonimmigCSP"), {
+  type: 'polarArea',
+      data: {
+      datasets: [{
+        data: [ 0.72,  2.74,  7.47, 11.77, 13.11,  9.65, 22.26, 32.27],
+        backgroundColor: [
+          color(chartColors.green).alpha(0.7).rgbString(),
+          color(chartColors.purple).alpha(0.7).rgbString(),
+          color(chartColors.blue).alpha(0.7).rgbString(),
+          color(chartColors.orange).alpha(0.7).rgbString(),
+          color(chartColors.yellow).alpha(0.7).rgbString(),
+          color(chartColors.grey).alpha(0.7).rgbString(),
+          color(chartColors.black).alpha(0.7).rgbString(),
+          color(chartColors.red).alpha(0.7).rgbString(),
+        ],
+        label: 'Immigrations'
+      }],
+      labels: ['Agriculteurs exploitants', "Artisans, commerçants, chefs d'entreprise",
+               'Cadres et professions intellectuelles supérieures', 'Professions intermédiaires',
+               'Employés', 'Ouvriers', 'Retraités', 'Sans activité professionnelle']
+      },
+      options: {
+        responsive: true,
+        title: {
+              display: true,
+              text: 'Répartition des catégories socio-professionelles - Population non immigrée- %'
+          },
+        legend: {
+            display: true,
+            position: 'bottom',
+        },
+      }
+});
+</script>
+
+<script type="text/javascript">
+new Chart(document.getElementById("chomageCSP"), {
+    type: 'bar',
+    data: {
+      datasets: [{
+      type: 'bar',
+      label: 'Cadres',
+      stack: 'Stack 0',
+      backgroundColor: color(window.chartColors.red).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.red,
+      borderWidth: 1,
+      data: [4]
+    }, {
+      type: 'bar',
+      label: 'Professions intermédiaires',
+      stack: 'Stack 1',
+      backgroundColor: color(window.chartColors.blue).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.blue,
+      borderWidth: 1,
+      data: [5.9]
+    },
+    {
+      type: 'bar',
+      label: 'Employés',
+      stack: 'Stack 2',
+      backgroundColor: color(window.chartColors.green).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.green,
+      borderWidth: 1,
+      data: [10.5]
+    },
+    {
+      type: 'bar',
+      label: 'Ouvriers',
+      stack: 'Stack 3',
+      backgroundColor: color(window.chartColors.orange).alpha(0.7).rgbString(),
+      borderColor: window.chartColors.orange,
+      borderWidth: 1,
+      data: [15]
+    },
+    ]
+    },
+    options: {
+          responsive: true,
+          title: {
+              display: true,
+          },
+          tooltips: {
+              mode: 'index',
+              intersect: true
+          },
+          hover: {
+                  mode: 'nearest',
+                  intersect: true
+              },
+          scales: {
+                  xAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: 'Catégories socio-professionelles'
+                      }
+                  }],
+                  yAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: "Taux de chômage - %"
+                      }
+                  }]
+              },
+}
+});
+</script>
+
+<!-- EUROSTAT DATA -->
+<script type="text/javascript">
+var color = Chart.helpers.color;
+
+// EUROSTAT Cumulées
+new Chart(document.getElementById("balanceFranceCumul"), {
+    type: 'bar',
+    data: {
+      labels: [1995, 2000, 2005, 2010, 2015],
+      datasets: [{
+      type: 'bar',
+      label: 'Immigrés',
+      stack: 'Stack 0',
+      backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+      borderColor: window.chartColors.red,
+      borderWidth: 1,
+      data: [6087993, 6278718, 6737600, 7196481, 7918382]
+    }, {
+      type: 'bar',
+      label: 'Emigrés',
+      stack: 'Stack 0',
+      backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+      borderColor: window.chartColors.blue,
+      borderWidth: 1,
+      data: [1405744, 1611877, 1793585, 2068096, 2256796]
+    },]
+    },
+    options: {
+          responsive: true,
+          title: {
+              display: true,
+              text: "Immigrés/Emigrés - Nombre cumulé",
+          },
+          tooltips: {
+              mode: 'index',
+              intersect: true
+          },
+          hover: {
+                  mode: 'nearest',
+                  intersect: true
+              },
+          scales: {
+                  xAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: 'Années'
+                      }
+                  }],
+                  yAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: "Immigrés/Emigrés - Nombre cumulé"
+                      }
+                  }]
+              },
+}
+});
+
+
+// EUROSTAT Non cumulées
+new Chart(document.getElementById("balanceFrance"), {
+    type: 'bar',
+    data: {
+      labels: [1995, 2000, 2005, 2010, 2015],
+      datasets: [{
+      type: 'bar',
+      label: 'Immigrés',
+      stack: 'Stack 0',
+      backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+      borderColor: window.chartColors.red,
+      borderWidth: 1,
+      data: [ 0.32173752,  0.31519584,  0.73151921,  0.71023216,  1.08687293]
+    }, {
+      type: 'bar',
+      label: 'Emigrés',
+      stack: 'Stack 0',
+      backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+      borderColor: window.chartColors.blue,
+      borderWidth: 1,
+      data: [-0.23234312, -0.3406594 , -0.28966683, -0.42487386, -0.28410117]
+    },]
+    },
+    options: {
+          responsive: true,
+          title: {
+              display: true,
+              text: 'Immigrés/Emigrés en pourcentage de la population française'
+          },
+          tooltips: {
+              mode: 'index',
+              intersect: true
+          },
+          hover: {
+                  mode: 'nearest',
+                  intersect: true
+              },
+          scales: {
+                  xAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: 'Années'
+                      }
+                  }],
+                  yAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: 'Immigrés/Emigrés en pourcentage de la population française'
+                      }
+                  }]
+              }
+}
+});
+</script>
+<script type="text/javascript">
+  var color = Chart.helpers.color;
+  new Chart(document.getElementById("immigrationAllCountry"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ['Etats Unis', 'Russie', 'Germany', 'Arabie Saoudite',
+               'Royaume Uni', 'Emirats Arabes Unis', 'France', 'Canada', 'Australie', 'Espagne'],
+      datasets: [{
+      backgroundColor: color(window.chartColors.blue).alpha(0.8).rgbString(),
+      borderColor: window.chartColors.blue,
+      label: 'Pourcentage population immigrée',
+      borderWidth: 1,
+      data: [21.02,  5.29,  5.22,  5.07,  3.83,  3.68,  3.5 ,  3.32, 3.03,  2.6]
+    },]
+    },
+    options: {
+          responsive: true,
+          title: {
+              display: true,
+          },
+          tooltips: {
+              mode: 'index',
+              intersect: true
+          },
+          hover: {
+                  mode: 'nearest',
+                  intersect: true
+              },
+          scales: {
+                  xAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: "Pourcentage d'immigrants total dans le monde"
+                      }
+                  }],
+                  yAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: "Pays - Destinations"
+                      }
+                  }]
+              },
+}
+});
+</script>
+<script type="text/javascript">
+  var color = Chart.helpers.color;
+  new Chart(document.getElementById("immigrationtoFrance"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ['Algérie', 'Maroc', 'Portugal', 'Tunisie', 'Italie',
+               'Espagne', 'Turquie', 'Allemagne', 'Royaume Uni', 'Belgique'],
+      datasets: [{
+      backgroundColor: color(window.chartColors.blue).alpha(0.8).rgbString(),
+      borderColor: window.chartColors.blue,
+      label: 'Pourcentage population immigrée',
+      borderWidth: 1,
+      data: [19.37, 12.54,  9.66,  5.26,  4.98,  4.12,  4.03,  3.16, 2.51,  2.07]
+    },]
+    },
+    options: {
+          responsive: true,
+          title: {
+              display: true,
+          },
+          tooltips: {
+              mode: 'index',
+              intersect: true
+          },
+          hover: {
+                  mode: 'nearest',
+                  intersect: true
+              },
+          scales: {
+                  xAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: "Pourcentage d'immigrants en France"
+                      }
+                  }],
+                  yAxes: [{
+                      display: true,
+                      scaleLabel: {
+                          display: true,
+                          labelString: "Pays - Origine"
+                      }
+                  }]
+              },
+}
+});
+</script>
+</body>
+
+</html>
