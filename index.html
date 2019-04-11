@@ -46,8 +46,11 @@ body {
 }
 
 h1 {
-    color: white;
+    text-align: center;
+    color: black;
     font-weight: 700;  
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 h2 {
@@ -76,6 +79,7 @@ h6 {
 </head>
 
 <body>
+    <h1>L'immigration et la France en chiffres</h1>
     <header>
         <div class="img-back">
             <div class="filter">
@@ -83,6 +87,20 @@ h6 {
         </div>
     </header>
 <!-- ./HEADER -->
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-6">
+          <center>
+            <img src="./static/img/fig1.png" width="350px" height="350px">
+          </center>
+        </div>
+        <div class="col-6">
+          <center>
+            <img src="./static/img/fig2.png" width="350px" height="350px">
+          </center>
+        </div>
+      </div>
+    </div>
 
     <div class="container my-5">
         <div class="row">
@@ -178,24 +196,6 @@ h6 {
     </div>
 
     <div class="container my-5">
-      <p> Mais, quelle est la situation mondiale en 2017 ?</p>
-      <div class="row">
-        <div class="col-md-6">
-          <p>En nombre d'immigrés</p>
-          <canvas id="immigrationAllCountry" width="80%" height="60%"></canvas>
-          <blockquote class="blockquote">
-            <footer class="blockquote-footer">Source: Eurostat</footer>
-          </blockquote>
-        </div>
-        <div class="col-md-6">          
-          <p>En pourcentage de la population totale du pays d'accueil</p>
-        </div>
-      </div>
-      <h5 style="color: red;">Jusqu’ici tout va bien non ?</h5>
-      <p>Pour comprendre pourquoi la question de l’immigration est centrale il nous faut alors nous intéresser au profil de ces personnes. </p>
-    </div>
-
-    <div class="container my-5">
       <div class="row">
         <div class="col-md-8">
           <p class="lead">Age</p>
@@ -273,38 +273,31 @@ h6 {
     </div>
 
     <div class = "container my-5">
-        <div class="my-3 p-3 bg-white rounded shadow-sm">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Pour s'informer</h6>
-          <div class="media text-muted pt-3">
-            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
-            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">Dataguele</strong>
-              <iframe width="560" height="315" src="https://www.youtube.com/watch?reload=9&v=KiGiupc3VwA" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            </p>
-          </div>
-          <div class="media text-muted pt-3">
-            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
-            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">@username</strong>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            </p>
-          </div>
-          <div class="media text-muted pt-3">
-            <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
-            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">@username</strong>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-            </p>
-          </div>
-          <small class="d-block text-right mt-3">
-            <a href="#">All updates</a>
-          </small>
-        </div>
+      <h3><strong>Pour s'informer</strong></h3>
+      <hr/>
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Datagueule - Immigration</h5>
+          <p>L'équipe de Datagueule déconstruit les idées reçues sur l'immigration</p>
+          <p><a class="btn btn-lg btn-primary" href="https://www.francetvinfo.fr/monde/europe/migrants/video-datagueule-des-chiffres-contre-les-idees-recues-sur-les-migrants_1808185.html" role="button">En savoir plus ...</a></p>
+        </div>  
+        <div class="col-md-4">
+          <h5>Le Monde</h5>
+          <p>7 idées reçues sur l'immigration et les immigrés en France</p>
+          <p><a class="btn btn-lg btn-primary" href="https://www.lemonde.fr/les-decodeurs/article/2014/08/06/sept-idees-recues-sur-l-immigration-et-les-immigres_4467506_4355770.html" role="button">En savoir plus ...</a></p>
+        </div> 
+        <div class="col-md-4">
+          <h5>France Culture</h5>
+          <p>Extraits de l'émission:</p>
+          <p>Mireille Delmas-Marty : " D'une certaine manière, le dérèglement climatique, c'est peut être une chance pour l'humanité si cela amène, alors qu'il est encore temps, à mettre en place une gouvernance mondiale, pas seulement pour le climat mais pour toutes les questions qui dépassent les compétences d'un seul état. (...) En matière de climat, aucun état ne peut faire face tout seul. "</p>
+          <p><a class="btn btn-lg btn-primary" href="https://www.lemonde.fr/les-decodeurs/article/2014/08/06/sept-idees-recues-sur-l-immigration-et-les-immigres_4467506_4355770.html" role="button">En savoir plus ...</a></p>
+        </div>   
+      </div>
+      <hr/>
     </div>
 
-      <p>De plus, le monde indique que: "L’autorisation provisoire de travail, qui doit être renouvelée au minimum tous les six mois, est délivrée par la préfecture sur certains critères : le demandeur d’asile doit disposer d’une promesse d’embauche ou d’un contrat de travail, et le préfet peut la refuser « si le niveau de chômage est trop important pour le métier dans le bassin d’emploi considéré »."
-      </p>
-      <p><a class="btn btn-lg btn-primary" href="https://www.lemonde.fr/les-decodeurs/article/2016/10/10/idee-recue-sur-les-migrants-4-6-ils-volent-le-travail-des-francais_5011081_4355770.html?fbclid=IwAR3pdBDruX-ORF1YovaZ6tLvgeVTJ0tZA2dck1Y4rtVa2IdwrIJKDPot2Eg" role="button">En savoir plus ...</a></p>
+    <div class = "container my-5">
+      <p><a class="btn btn-lg btn-dark" href="#" role="button">Back to top</a></p>
     </div>
 
 
@@ -361,8 +354,8 @@ new Chart(document.getElementById("evolMoyImmigPercent"), {
       labels: [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
       datasets: [{
       label: 'Immigrés - %',
-      backgroundColor: color(window.chartColors.red).alpha(0.7).rgbString(),
-      borderColor: window.chartColors.red,
+      backgroundColor: color(window.chartColors.blue).alpha(0.8).rgbString(),
+      borderColor: window.chartColors.blue,
       borderWidth: 1,
       fill: false,
       data: [6.6, 6.8, 6.8, 6.9, 7. , 7.1, 7.2, 7.3, 7.4, 7.5]
