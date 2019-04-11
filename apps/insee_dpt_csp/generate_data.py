@@ -49,8 +49,10 @@ data_immig = data_immig.drop(col_keep[1:], axis=1)
 data_immig['Departement'] = data_immig['CODGEO'].apply(lambda x: x[:2])
 res = data_immig.groupby(['Departement'],
                          as_index=False)[list(dic.values())].sum()
-res_immig = data_immig.sum(axis=0)
-res_immig = list(res_immig[list(dic.values())])
+# Focus sur la population active
+res = res.drop(['Retraités',
+                'Autres personnes sans activité professionnelle'], axis=1)
+res_immig = res.sum(axis=0).values[1:].astype(float)
 res_immig_tot = np.round(np.array(res_immig)/np.sum(res_immig)*100, 2)
 
 # Non Immig
@@ -82,6 +84,13 @@ data_non_immig = data_non_immig.drop(col_keep[1:], axis=1)
 data_non_immig['Departement'] = data_non_immig['CODGEO'].apply(lambda x: x[:2])
 res = data_non_immig.groupby(['Departement'],
                    as_index=False)[list(dic.values())].sum()
+# Focus sur la population active
+res = res.drop(['Retraités',
+                'Autres personnes sans activité professionnelle'], axis=1)
+res_non_immig = res.sum(axis=0).values[1:].astype(float)
+res_non_immig_tot = np.round(np.array(res_non_immig)/np.sum(res_non_immig)*100, 2)
+
+
 res_non_immig = data_non_immig.sum(axis=0)
 res_non_immig = list(res_non_immig[list(dic.values())])
 res_non_immig_tot = np.round(np.array(res_non_immig)/np.sum(res_non_immig)*100, 2)

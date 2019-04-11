@@ -272,6 +272,74 @@ res_all_dpt_15_tot = res_all_dpt_15.sum(axis=0)
 res_all_dpt_25_tot = res_all_dpt_25.sum(axis=0)
 res_all_dpt_55_tot = res_all_dpt_55.sum(axis=0)
 
+# Population immig par tranche d'age
+pop_total = []
+_00 = []
+_15 = []
+_25 = []
+_55 = []
+
+for col in res_all_dpt_00_tot.index:
+    if 'total_number_' in col:
+        _00.append([col, res_all_dpt_00_tot.loc[col], int(col.split('_')[2])])
+
+for col in res_all_dpt_00_tot.index:
+    if 'pop_immig_total_' in col:
+        pop_total.append([col, res_all_dpt_00_tot.loc[col], int(col.split('_')[3])])
+
+for col in res_all_dpt_15_tot.index:
+    if 'total_number_' in col:
+        _15.append([col, res_all_dpt_15_tot.loc[col], int(col.split('_')[2])])
+
+for col in res_all_dpt_25_tot.index:
+    if 'total_number_' in col:
+        _25.append([col, res_all_dpt_25_tot.loc[col], int(col.split('_')[2])])
+
+for col in res_all_dpt_55_tot.index:
+    if 'total_number_' in col:
+        _55.append([col, res_all_dpt_55_tot.loc[col], int(col.split('_')[2])])
+
+pop_total = pd.DataFrame(pop_total, columns=['titre', 'number', 'year']).sort_values('year')
+_00 = pd.DataFrame(_00, columns=['titre', 'number', 'year']).sort_values('year')
+_15 = pd.DataFrame(_15, columns=['titre', 'number', 'year']).sort_values('year')
+_25 = pd.DataFrame(_25, columns=['titre', 'number', 'year']).sort_values('year')
+_55 = pd.DataFrame(_55, columns=['titre', 'number', 'year']).sort_values('year')
+
+# Treated
+pop_total['prev'] = pop_total['number'].shift(periods=1)
+pop_total = pop_total.dropna(axis=0)
+pop_total['evolv_tot'] = pop_total['number'] - pop_total['prev']
+
+_00['prev'] = _00['number'].shift(periods=1)
+_00 = _00.dropna(axis=0)
+_00['evolv'] = _00['number'] - _00['prev']
+_00 = _00.merge(pop_total, on = ['year'], how='inner')
+_00['evolv'] = (_00['evolv']/_00['evolv_tot'])*100
+evol_00 = np.round(np.array(_00.evolv), 2)
+
+_15['prev'] = _15['number'].shift(periods=1)
+_15 = _15.dropna(axis=0)
+_15['evolv'] = _15['number'] - _15['prev']
+_15 = _15.merge(pop_total, on = ['year'], how='inner')
+_15['evolv'] = (_15['evolv']/_15['evolv_tot'])*100
+evol_15 = np.round(np.array(_15.evolv), 2)
+
+_25['prev'] = _25['number'].shift(periods=1)
+_25 = _25.dropna(axis=0)
+_25['evolv'] = _25['number'] - _25['prev']
+_25 = _25.merge(pop_total, on = ['year'], how='inner')
+_25['evolv'] = (_25['evolv']/_25['evolv_tot'])*100
+evol_25 = np.round(np.array(_25.evolv), 2)
+
+_55['prev'] = _55['number'].shift(periods=1)
+_55 = _55.dropna(axis=0)
+_55['evolv'] = _55['number'] - _55['prev']
+_55 = _55.merge(pop_total, on = ['year'], how='inner')
+_55['evolv'] = (_55['evolv']/_55['evolv_tot'])*100
+evol_55 = np.round(np.array(_55.evolv), 2)
+
+np.sum([evol_00, evol_15, evol_25, evol_55], axis=0)
+
 years = ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013',
          '2014', '2015']
 

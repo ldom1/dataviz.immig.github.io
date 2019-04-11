@@ -28,7 +28,7 @@ for col in data.columns:
     except Exception:
         pass
 
-df = data[data['Year'] == 2017]
+df = data[data['Year'] == 2015]
 df = df.set_index(['Major area, region, country or area of destination'])
 df = df.drop(['WORLD', 'High-income countries', 'More developed regions',
               'EUROPE', 'Less developed regions', 'Western Europe',
@@ -219,16 +219,33 @@ df_map_caps_all = df_map_caps_all.groupby(['destination'], as_index=False)['numb
 df_map_caps_all = df_map_caps_all.sort_values('number')
 
 # 10 first
+# all population
+pop_all_country = pd.read_csv(os.getcwd().replace('define_map', '') + 'data/pop_monde.csv', sep=";")
+
+df_map_caps_all = df_map_caps_all.merge(pop_all_country, left_on='destination',
+                                        right_on='Country', how='inner')
+
+df_map_caps_all['share'] = (df_map_caps_all['number']/df_map_caps_all['Population'])*100
+df_all_share = df_map_caps_all.sort_values('share')
+
+list_contry = ['United Arab Emirates', 'Kuwait', 'Liechtenstein',
+               'Qatar', 'Andorra', 'Bahrain',
+               'Oman', 'Luxembourg', 'Falkland Islands', 'United States of America', 'France']
+df_all_share['main_cntry'] = df_all_share['destination'].apply(lambda x: x if x in list_contry else 'other')
+df_all_share = df_all_share.groupby(['main_cntry', 'share'], as_index=False)['number'].sum()
+
+# En nombre
+df_all_nb = df_map_caps_all.sort_values('number')
+
 list_contry = ['United States of America', 'Russian Federation', 'Germany',
                'Saudi Arabia', 'United Kingdom', 'United Arab Emirates',
                'France', 'Canada', 'Australia', 'Spain']
-df_map_caps_all['main_cntry'] = df_map_caps_all['destination'].apply(lambda x: x if x in list_contry else 'other')
-df_map_caps_all = df_map_caps_all.groupby(['main_cntry'], as_index=False)['number'].sum()
-df_map_caps_all['share'] = df_map_caps_all['number']/np.sum(df_map_caps_all['number'])*100
+df_all_nb['main_cntry'] = df_all_nb['destination'].apply(lambda x: x if x in list_contry else 'other')
+df_all_nb = df_all_nb.groupby(['main_cntry'], as_index=False)['number'].sum()
 
-index_sort = list(np.argsort(list(df_map_caps_all.share))[::-1])
-np.round(list(df_map_caps_all.share), 2)[index_sort]
-np.array(list(df_map_caps_all.main_cntry))[index_sort]
+index_sort = list(np.argsort(list(df_all_nb.number))[::-1])
+np.round(list(df_all_nb.number), 2)[index_sort]
+np.array(list(df_all_nb.main_cntry))[index_sort]
 
 
 # List number to france
