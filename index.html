@@ -92,12 +92,12 @@ h6 {
       <div class="row">
         <div class="col-6">
           <center>
-            <img src="./static/img/fig1.png" width="350px" height="350px">
+            <img src="./static/img/fig1.png" width="70%" height="70%">
           </center>
         </div>
         <div class="col-6">
           <center>
-            <img src="./static/img/fig2.png" width="350px" height="350px">
+            <img src="./static/img/fig2.png" width="70%" height="70%">
           </center>
         </div>
       </div>
@@ -152,9 +152,11 @@ h6 {
             </br>
             </br>
             <div class="p-4 mb-3 bg-light rounded">
-              <p class="mb-0">Ce graphique représente l’évolution temporelle de la part de la population immigrée en France. Par immigré, nous entendons des personnes nées étrangères et à l’étranger résidant en France (définition INSEE).</p>
+              <p class="mb-0">Ce graphique représente l’évolution temporelle de la part de la population immigrée en France</p>
             </div>
           </div>
+              <p>Définition d'immigré - INSEE:</p>
+              <p><i>Selon la définition adoptée par le Haut Conseil à l'Intégration, un immigré est une personne née étrangère à l'étranger et résidant en France. Les personnes nées françaises à l'étranger et vivant en France ne sont donc pas comptabilisées. À l'inverse, certains immigrés ont pu devenir français, les autres restant étrangers. Les populations étrangère et immigrée ne se confondent pas totalement : un immigré n'est pas nécessairement étranger et réciproquement, certains étrangers sont nés en France (essentiellement des mineurs). La qualité d'immigré est permanente : un individu continue à appartenir à la population immigrée même s'il devient français par acquisition. C'est le pays de naissance, et non la nationalité à la naissance, qui définit l'origine géographique d'un immigré.</i></p>
             <h5 style="color: red;">Oh, mais rien ne bouge, non ?</h5>
             <p>Les données nous permettent par ailleurs de mieux connaître ces personnes et avant tout leur origine. La carte ci-dessous représente les dix flux entrants les plus importants. </p>
         </div>
@@ -169,6 +171,9 @@ h6 {
         <blockquote class="blockquote">
           <footer class="blockquote-footer">Source: Eurostat</footer>
         </blockquote>
+        </br>
+        </br>
+        <p>L'intensité du rouge de la flèche représente l'intensité du mouvement migratoire.</p>
     </div>
 
     <div class="container my-5">
@@ -215,14 +220,14 @@ h6 {
           </br>
           </br>
           <div class="p-4 mb-3 bg-light rounded">
-            <p class="mb-0"> Bien que les parts des tranches d'âge de la population immigrée totale ne varie pas au cours du temps, ce graphique nous indique que le profil des personnes entrantes se modifient ces denrières années. En effet, si la part des seniors stagne, la population active âgée de 25 à 55 ans migre moins au profit des jeunes (0-25 ans).</p>
+            <p class="mb-0"> Bien que les parts des tranches d'âge de la population immigrée totale ne varie pas au cours du temps, ce graphique nous indique que le profil des personnes entrantes se modifient ces dernières années. En effet, si la part des seniors stagne, la population active âgée de 25 à 55 ans migre moins au profit des jeunes (0-25 ans).</p>
           </div>
         </div>
       </div>
       <h5 style="color: red;">Pour rappel,le chômage et le pouvoir d’achat sont au centre des attentions de la population française, d'après l'eurobaromètre.</h5>
       <p>Ceci expliquerait-il le préjugé suivant : <i>« Les immigrés volent nos postes ».</i>
           Bien que nous ne prétendons pas que les possibles conflits sur le marché du travail soit la seule raison de l’attisement de la préoccupation autour de la question de l’immigration, nous nous interrogeons sur la suffisance de ces chiffres pour confirmer ces craintes.</p>
-      <p>Pour y répondre, nous avons confronté les distributions des catégories socio-professionnelles des populations immigrée et non-immigrée aux taux de  chômage de ces mêmes catégories. </p>
+      <p>Pour y répondre, nous avons confronté les distributions des catégories socio-professionnelles des populations immigrées et non-immigrées aux taux de  chômage de ces mêmes catégories. </p>
       <hr/>
     </div>
     <div class="container my-5">
@@ -243,7 +248,7 @@ h6 {
       </div>
       <p><span class="text-muted"> Focus </span></p>
       <p>
-        On remarque que la population immigrée est plus représentée dans les catégories socio-professionnelles "Ouvriers" et "Employés". A l'inverse, la population non immigrée, quant à elle, est plus représentée dans les catégories "Professions intermédiaires" et "Cadres".
+        On remarque que la population immigrée est plus représentée dans les catégories socio-professionnelles "Ouvriers" et "Employés". A l'inverse, la population non immigrée, quant à elle, est plus représentée dans les catégories "Employés" et "Professions intermédiaires". Enfin, en comparant les deux population, la population non-immigrée est plus représentée dans la catégories "Cadres" que la population immigrée.
       </p>
       <div class="row">
         <div class="col-md-7">
@@ -260,7 +265,7 @@ h6 {
           </br>
           </br>
           <div class="p-4 mb-3 bg-light rounded">
-            <p class="mb-0">Ce graphe représente le taux de chômage par catégorie socio-professionnelles.</p>
+            <p class="mb-0">Ce graphe représente le taux de chômage par catégorie socio-professionnelle.</p>
           </div>
         </div>
       </div>
@@ -358,7 +363,7 @@ new Chart(document.getElementById("evolMoyImmigPercent"), {
       backgroundColor: color(window.chartColors.blue).alpha(0.8).rgbString(),
       borderColor: window.chartColors.blue,
       borderWidth: 1,
-      fill: false,
+      fill: true,
       data: [6.6, 6.8, 6.8, 6.9, 7. , 7.1, 7.2, 7.3, 7.4, 7.5]
     },]
     },
