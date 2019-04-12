@@ -165,7 +165,7 @@ h6 {
 
      <div class="container my-5">
       <h2>Caractéristiques des personnes ayant migrées <span class="text-muted"> Focus</span></h2>
-      <p class="lead">Origine - En 2017</p>
+      <p class="lead"> Quels sont les origines les plus représentées en France en 2017 ? </p>
       <div class="row" id="chartdiv">
       </div>
         <blockquote class="blockquote">
@@ -180,7 +180,7 @@ h6 {
       <div class="row">
 
         <div class="col-md-7">
-          <p> Quels sont les origines les plus représentées en France en 2017 ? </p>
+          
           <canvas id="immigrationtoFrance" width="80%" height="60%"></canvas>
           <blockquote class="blockquote">
             <footer class="blockquote-footer">Source: Eurostat</footer>
@@ -757,7 +757,7 @@ new Chart(document.getElementById("balanceFrance"), {
       datasets: [{
       backgroundColor: color(window.chartColors.blue).alpha(0.8).rgbString(),
       borderColor: window.chartColors.blue,
-      label: 'Pourcentage population immigrée',
+      label: 'Pourcentage de population immigrée en France en 2017',
       borderWidth: 1,
       data: [21.02,  5.29,  5.22,  5.07,  3.83,  3.68,  3.5 ,  3.32, 3.03,  2.6]
     },]
