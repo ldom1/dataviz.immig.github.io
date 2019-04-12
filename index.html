@@ -18,226 +18,264 @@
     <title>Elections et immigration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Krub:300,400,700|Merriweather:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-    <link type="text/css" rel="stylesheet" href="./static/css/animate.css"/>
-    
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style type="text/css">
-    .img-back {
-    background-image: url('./static/img/france_ue.jpg');
-    background-position: center, center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-}
-
-.title {
-    text-align: center;
-    padding-top: 70px;
-}
 
 /*
 ** BASE
 */
-body {
-    font-family: krub;
-    margin: 0px,
-    
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
+.body{
+  font-family: 'krub', sans-serif;
+  font-size:16px;
+  }
+  p{
+  color:#6c6c6f;
+  font-size:1em;
+  }
+  h1,h2,h3,h4,h5,h6{color:black;text-transform:uppercase;}
+
+.navbar-brand {
+  color: #fff;
+  font-size:25px;
+    font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
+  font-weight:700;
+  letter-spacing:0.1em;
 }
 
-h1 {
-    text-align: center;
-    color: black;
-    font-weight: 700;  
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-h2 {
-    color: black;
-    font-weight: 400;
-    padding-top: 10px;
-}
-
-h3 {
-    margin-top: 40px;
-}
-
-h4 {
-  color: black;
-    margin-top: 10px;
-}
-
-h5 {
-    color: black;
-}
-
-h6 {
-    margin : 65px 0px;
-}
-
-/* Carousseul */
-/*
-Fade content bs-carousel with hero headers
-Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
-Image credits: unsplash.com
-*/
-
-/********************************/
-/*       Fade Bs-carousel       */
-/********************************/
-.fade-carousel {
-    position: relative;
-    height: 100vh;
-}
-.fade-carousel .carousel-inner .item {
-    height: 100vh;
-}
-.fade-carousel .carousel-indicators > li {
-    margin: 0 2px;
-    background-color: #f39c12;
-    border-color: #f39c12;
-    opacity: .7;
-}
-.fade-carousel .carousel-indicators > li.active {
-  width: 10px;
-  height: 10px;
-  opacity: 1;
-}
-
-/********************************/
-/*          Hero Headers        */
-/********************************/
-.hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
+.navbar-nav .nav-item .nav-link{
+  padding: 1.1em 1em!important;
+  font-size: 120%;
+    font-weight: 500;
+    letter-spacing: 1px;
     color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
-      -webkit-transform: translate3d(-50%,-50%,0);
-         -moz-transform: translate3d(-50%,-50%,0);
-          -ms-transform: translate3d(-50%,-50%,0);
-           -o-transform: translate3d(-50%,-50%,0);
-              transform: translate3d(-50%,-50%,0);
+   font-family: 'Gothic A1', sans-serif;
 }
-.hero h1 {
-    font-size: 6em;    
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+.navbar-nav .nav-item .nav-link:hover{color:#5A5A5A;}
+.navbar-expand-md .navbar-nav .dropdown-menu{
+  border-top:3px solid #5A5A5A;
 }
-
-.fade-carousel .carousel-inner .item .hero {
-    opacity: 0;
-    -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s; 
-        -ms-transition: 2s all ease-in-out .1s; 
-         -o-transition: 2s all ease-in-out .1s; 
-            transition: 2s all ease-in-out .1s; 
-}
-.fade-carousel .carousel-inner .item.active .hero {
-    opacity: 1;
-    -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s; 
-        -ms-transition: 2s all ease-in-out .1s; 
-         -o-transition: 2s all ease-in-out .1s; 
-            transition: 2s all ease-in-out .1s;    
+.dropdown-item:hover{background-color:#fed136;color:#fff;}
+nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
+    -moz-transition: padding-top .3s,padding-bottom .3s;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+  }
+  
+ .shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #212529;
 }
 
-/********************************/
-/*            Overlay           */
-/********************************/
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: #080d15;
-    opacity: .7;
+/* Header */
+.banner{
+  background-image:url('./static/img/france_ue.jpg');
+  text-align: center;
+    color: #fff;
+   
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+.banner-text{
+  padding:200px 0 150px 0;
+}
+.banner-heading{
+  font-family: 'krub', cursive;
+  font-size: 75px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 30px;
+  color:#fff;
+}
+.banner-sub-heading{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+  color:#fff;
 }
 
-/********************************/
-/*          Custom Buttons      */
-/********************************/
-.btn.btn-lg {padding: 10px 40px;}
-.btn.btn-hero,
-.btn.btn-hero:hover,
-.btn.btn-hero:focus {
-    color: #f5f5f5;
-    background-color: #1abc9c;
-    border-color: #1abc9c;
-    outline: none;
-    margin: 20px auto;
+.btn-banner{
+  padding:5px 20px;
+  border-radius:10px;
+  font-weight:700;
+  line-height:1.5;
+  text-align:center;
+  color:#fff;
+  text-transform:uppercase;
+}
+.text-intro{
+  width:90%;
+  margin:auto;
+  text-align:center;
+  padding-top:30px;
 }
 
-/********************************/
-/*       Slides backgrounds     */
-/********************************/
-.fade-carousel .slides .slide-1, 
-.fade-carousel .slides .slide-2,
-.fade-carousel .slides .slide-3 {
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+
+/* mobile view */
+@media (max-width:500px)
+{
+  .navbar-nav{
+    background-color:black;
+    border-top:3px solid #fed136;
+    color:#fff;
+    z-index:1;
+    margin-top:5px;
+    }
+  .navbar-nav .nav-item .nav-link{
+  padding: 0.7em 1em!important;
+  font-size: 100%;
+    font-weight: 500;
+    }
+  .banner-text{
+  padding:150px 0 150px 0;
 }
-.fade-carousel .slides .slide-1 {
-  background-image: url('./static/img/france_ue.jpg'); 
+.banner-heading{
+  font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
 }
-/********************************/
-/*          Media Queries       */
-/********************************/
-@media screen and (min-width: 980px){
-    .hero { width: 980px; }    
+.banner-sub-heading{
+  font-size: 10px;
+    font-weight: 200;
+    line-height: 10px;
+    margin-bottom: 40px;
 }
-@media screen and (max-width: 640px){
-    .hero h1 { font-size: 4em; }    
+
 }
+
+@media (max-width:768px){
+  .banner-text{
+  padding:150px 0 150px 0;
+}
+  .banner-sub-heading{
+  font-size: 23px;
+    font-weight: 200;
+    line-height: 23px;
+    margin-bottom: 40px;
+}
+}
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
 </style>
 </head>
 
 <body>
-    <header>
-        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-          <!-- Overlay -->
-          <div class="overlay"></div>
-          
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item slides active">
-              <div class="slide-1"></div>
-              <div class="hero">
-                <hgroup>
-                    <h1 style="color:white;">L'immigration et la France en chiffres</h1>        
-                </hgroup>
-              </div>
-            </div>
-          </div> 
-        </div>
-    </header>
-<!-- ./HEADER -->
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-6">
-          <center>
-            <img src="./static/img/fig1.png" width="70%" height="70%">
-          </center>
-        </div>
-        <div class="col-6">
-          <center>
-            <img src="./static/img/fig2.png" width="70%" height="70%">
-          </center>
-        </div>
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+  <div class="container">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Viz info</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#origines">Origines</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#caracteristiques">Age</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#csp">Catégories socio-professionnelles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#informer">S'informer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+     <!-- Header -->
+  <div class="banner">
+    <div class="container">
+      <div class="banner-text">
+        <div class="banner-heading">
+          L'IMMIGRATION ET LA FRANCE EN CHIFFRES
+          </div>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <a class="btn btn-lg btn-dark" href="#intro" role="button">Commencer !</a>
       </div>
     </div>
+  </div>
+
+    <!-- Intro -->
+    <section id="intro">
+      <div class="container my-5">
+        <hr/>
+        <h2>Contexte</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <center>
+              <img src="./static/img/fig1.png" width="70%" height="70%">
+            </center>
+          </div>
+          <div class="col-md-6">
+            <center>
+              <img src="./static/img/fig2.png" width="70%" height="70%">
+            </center>
+          </div>
+        </div>
+      </div>
 
     <div class="container my-5">
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-12">
                 <p>A l’approche des élections européennes, le paysage politique est au centre de toutes les attentions. L’une des craintes majeures de ce scrutin est une percée notable au Parlement Européen des partis d’extrême droite. Une telle issue est d’autant plus probable que le vote populiste suit une tendance croissante sur le Vieux Continent depuis 2001, comme on peut le constater sur <a href="http://grand-angle.lefigaro.fr/extreme-droite-europe-enquete-vote-populisme">l’infographie du Figaro</a>.
                 Une entrée « massive » au Parlement Européen de partis populistes serait synonyme de difficultés quant aux réformes de l’Union que certains estiment aujourd’hui pressantes.</p >
                 <p>
@@ -251,13 +289,13 @@ Image credits: unsplash.com
         </div>
         <hr/>
         <div class="row">
-            <div class="col-12 col-lg-6 wow fadeInLeft">
+            <div class="col-md-6">
                 </a>
                 <h4>En 2014</h4>
                 <p><strong>9%</strong> de la population estimait que l’immigration était l’une des deux plus importantes problématiques auxquelles la France était confrontée. Mais <strong>20%</strong> étaient de l’avis que ce sujet était l’un des plus sensibles pour l’Union Européenne. Toutefois le contexte économique, post-crise, attisait le plus de crainte.</p>
                 <p><a class="btn btn-lg btn-primary" href="http://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/Chart/getChart/themeKy/42/groupKy/208?fbclid=IwAR2vVBZ_HnYgBwjT9tieeCN5PGxIuk4W-niFpj2uDlPgjdPda20aADPRFjo" role="button">En savoir plus ...</a></p>
             </div>
-            <div class="col-12 col-lg-6 wow fadeInRight">  
+            <div class="col-md-6">  
                 <h4>En 2018</h4>
                 <p>Avec la reprise économique, les préoccupations des Français ont changé. Bien que le chômage et le pouvoir d’achat soient au centre des attentions, la question de l’immigration est estimée comme l’une des deux plus importantes problématiques auxquelles est confrontée la France par <strong>15%</strong> des citoyens. Concernant l’Europe, elle devient la préoccupation première avec <strong>33%</strong> des suffrages.</p>
                 <p><a class="btn btn-lg btn-primary" href="http://ec.europa.eu/commfrontoffice/publicopinion/index.cfm/Chart/getChart/themeKy/42/groupKy/208?fbclid=IwAR2vVBZ_HnYgBwjT9tieeCN5PGxIuk4W-niFpj2uDlPgjdPda20aADPRFjo" role="button">En savoir plus ...</a></p>
@@ -266,6 +304,7 @@ Image credits: unsplash.com
         <h3>Tentons alors de comprendre ce constat par les chiffres. Que s’est-il passé en si peu de temps ?</h3>
         <hr/>
     </div>
+  </section>
     
     <div class="container my-5">
         <div class="row">
@@ -295,8 +334,10 @@ Image credits: unsplash.com
         <hr/>
     </div>
 
+    <!-- Origines -->
+    <section id="origines">
      <div class="container my-5">
-      <h2>Caractéristiques des personnes ayant migrées <span class="text-muted"> Focus</span></h2>
+      <h2>Origines des personnes ayant migrées <span class="text-muted"> Focus</span></h2>
       <p class="lead"> Quelles sont les origines les plus représentées en France en 2017 ? </p>
       <div class="row" id="chartdiv">
       </div>
@@ -337,7 +378,6 @@ Image credits: unsplash.com
       <p class="lead"> Et plus précisement, où vont-ils en France ?</p>
       <div class="row">
         <div class="col-md-7">
-          <div class="container">          
             <div class="mapcontainer">
                 <div class="map">
                     <span>Alternative content for the map</span>
@@ -347,7 +387,6 @@ Image credits: unsplash.com
                     <span>Alternative content for the legend</span>
                 </div>
             </div>
-          </div>
         </div>
         <div class="col-md-5">
           </br>
@@ -362,12 +401,16 @@ Image credits: unsplash.com
             </div>
         </div>
     </div>
+    <hr/>
     </div>
+    </section>
 
+    <!-- Caractéristiques -->
+    <section id="caracteristiques">
     <div class="container my-5">
+      <h2>Age des personnes ayant migrées <span class="text-muted"> Focus</span></h2>
       <div class="row">
         <div class="col-md-8">
-          <p class="lead">Age</p>
           <p>Evolution temporelle de l'âge des nouveaux arrivants en pourcentage</p>
           <canvas id="ageEvolTemp" width="80%" height="60%"></canvas>
           <blockquote class="blockquote">
@@ -393,8 +436,12 @@ Image credits: unsplash.com
       <p>Pour y répondre, nous avons confronté les distributions des catégories socio-professionnelles des populations immigrée et non-immigrée aux taux de  chômage de ces mêmes catégories. </p>
       <hr/>
     </div>
+    </section>
+
+    <!-- CSP -->
+    <section id="csp">
     <div class="container my-5">
-      <p class="lead">Aperçu des catégories socio-professionnelles.</p>
+      <h2>Catégories socio-professionnelles des personnes ayant migrées <span class="text-muted"> Focus</span></h2>
       <div class="row">
         <div class="col-md-6">
           <canvas id="immigCSP" width="90%" height="90%"></canvas>
@@ -434,8 +481,10 @@ Image credits: unsplash.com
       </div>
       <hr/>
     </div>
+    </section>
 
     <div class = "container my-5">
+      <h2>Constats</h2>
       <p> <strong>Nous sommes partis de constats entendus et relayés largement dans la presse en ces temps d'élections. L'immigration étant un sujet central dans les médias, nous avons voulu nous pencher sur ce sujet. </strong></p>
       <p> <strong>Cette analyse n'a pas pour but de confirmer ou d'infirmer de quelconques idées politiques ou sociétales, nous voulons simplement, au travers des données disponibles sur l'INSEE et Eurostat, retracer l'histoire de l'immigration en détail, en France depuis 2006.</strong> </p>
       <p>Ainsi, aux vues des quelques graphiques que nous présentons, notamment l'évolution du nombres d'immigrés en France, la répartition par classe d'âge, la distribution de la population dans les différentes catégories socio-professionnelles et le taux de chomage associés à celles-ci, la conclusion ne semble pas triviale. En effet, que ce soit en terme de conflit sociétal ou sur le marché du travail, il ne semble pas possible d'incriminer l'immigration à l'inverse de la démarche de certains partis politiques dans les débats.</p>
@@ -443,45 +492,57 @@ Image credits: unsplash.com
       <hr/>
     </div>
 
-    <div class = "container my-5">
-      <h3><strong>Pour s'informer</strong></h3>
-      <hr/>
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Datagueule - Immigration</h5>
-          <p>L'équipe de Datagueule déconstruit les idées reçues sur l'immigration</p>
-          <p><a class="btn btn-lg btn-primary" href="https://www.francetvinfo.fr/monde/europe/migrants/video-datagueule-des-chiffres-contre-les-idees-recues-sur-les-migrants_1808185.html" role="button">En savoir plus ...</a></p>
-        </div>  
-        <div class="col-md-4">
-          <h5>Le Monde</h5>
-          <p>7 idées reçues sur l'immigration et les immigrés en France</p>
-          <p><a class="btn btn-lg btn-primary" href="https://www.lemonde.fr/les-decodeurs/article/2014/08/06/sept-idees-recues-sur-l-immigration-et-les-immigres_4467506_4355770.html" role="button">En savoir plus ...</a></p>
-        </div> 
-        <div class="col-md-4">
-          <h5>France Culture</h5>
-          <p>Mireille Delmas-Marty : " D'une certaine manière, le dérèglement climatique, c'est peut être une chance pour l'humanité si cela amène, alors qu'il est encore temps, à mettre en place une gouvernance mondiale, pas seulement pour le climat mais pour toutes les questions qui dépassent les compétences d'un seul état. (...) (ndlr l'immigration ...)"</p>
-          <p><a class="btn btn-lg btn-primary" href="https://www.lemonde.fr/les-decodeurs/article/2014/08/06/sept-idees-recues-sur-l-immigration-et-les-immigres_4467506_4355770.html" role="button">En savoir plus ...</a></p>
-        </div>   
+    <!-- s'informer -->
+    <section id="informer">
+      <div class = "container my-5">
+        <h3><strong>Pour s'informer</strong></h3>
+        <hr/>
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Datagueule - Immigration</h5>
+            <p>L'équipe de Datagueule déconstruit les idées reçues sur l'immigration</p>
+            <p><a class="btn btn-lg btn-primary" href="https://www.francetvinfo.fr/monde/europe/migrants/video-datagueule-des-chiffres-contre-les-idees-recues-sur-les-migrants_1808185.html" role="button">En savoir plus ...</a></p>
+          </div>  
+          <div class="col-md-4">
+            <h5>Le Monde</h5>
+            <p>7 idées reçues sur l'immigration et les immigrés en France</p>
+            <p><a class="btn btn-lg btn-primary" href="https://www.lemonde.fr/les-decodeurs/article/2014/08/06/sept-idees-recues-sur-l-immigration-et-les-immigres_4467506_4355770.html" role="button">En savoir plus ...</a></p>
+          </div> 
+          <div class="col-md-4">
+            <h5>France Culture</h5>
+            <p>Mireille Delmas-Marty : " D'une certaine manière, le dérèglement climatique, c'est peut être une chance pour l'humanité si cela amène, alors qu'il est encore temps, à mettre en place une gouvernance mondiale, pas seulement pour le climat mais pour toutes les questions qui dépassent les compétences d'un seul état. (...) (ndlr l'immigration ...)"</p>
+            <p><a class="btn btn-lg btn-primary" href="https://www.lemonde.fr/les-decodeurs/article/2014/08/06/sept-idees-recues-sur-l-immigration-et-les-immigres_4467506_4355770.html" role="button">En savoir plus ...</a></p>
+          </div>   
+        </div>
+        <hr/>
       </div>
-      <hr/>
-    </div>
+    </section>
 
-    <div class = "container my-5">
-      <p><a class="btn btn-lg btn-dark" href="#" role="button">Back to top</a></p>
-    </div>
+    <!-- Contact -->
+    <section id="contact">
+       <div class = "container my-5">
+        <h3><strong>Contact</strong></h3>
+          <center>
+            <h5>Contactez l'équipe Viz info</h5>
+            <hr/>
+            <a href="https://www.facebook.com/data.viz.58"><i class="fa fa-2x fa-fw fa-facebook"></i>
+            <a href="https://twitter.com/Vizinfo2"><i class="fa fa-2x fa-fw fa-twitter"></i></a>
+
+          </center>
+          <div class="row">
+          <div class="col-md-12">
+           <p class="text-center">Copyright @2019 | par Viz info</p>
+          </div>
+        </div>
+        </div>
+    </section>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
-
-<script>
-  window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
 <script src="./static/js/bootstrap.bundle.min.js"></script>
 <script src="./static/js/Chart.min.js"></script>
@@ -514,6 +575,19 @@ Image credits: unsplash.com
 }
 
 </style>
+
+<script type="text/javascript">
+  
+  $(document).on("scroll", function(){
+    if
+      ($(document).scrollTop() > 86){
+      $("#banner").addClass("shrink");
+    }
+    else
+    {
+      $("#banner").removeClass("shrink");
+    }
+  }); </script>
 
 <!-- INSEE DATA -->
 <script type="text/javascript">
